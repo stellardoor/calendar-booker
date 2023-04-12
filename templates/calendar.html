@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %} Book Tasting{% endblock %}
+
+{% block body %}
+
+<input type="date" id="calendar-input" min={{today}}>
+
+<div id="appt-options"></div>
+
+    <script src="/static/js/calendar.js"></script>
+{% endblock %}

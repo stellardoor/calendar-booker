@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %} welcome {% endblock %}
+
+{% block body %}
+{% if 'user_id' in session %}
+<div>Welcome Back {{session["fname"]}}</div>
+{% endif %}
+
+    <script src="/static/js/home.js"></script>
+{% endblock %}

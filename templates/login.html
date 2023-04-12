@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %} Login {% endblock %}
+
+{% block body %}
+
+<div class="col-md-8 col-lg-6" style="position: fixed;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);">
+  
+    <span >Login Below:</span><br><br>
+    <br>
+    <form id="login-form" class="login-form">
+        <span> &nbsp;&nbsp;&nbsp;&nbsp; Email: &nbsp;</span><input type="text" id="email" placeholder="********@email.com"><br>
+        <span> Password: </span><input type="password" id="password" placeholder="**********"> <br>
+        <input type="submit" value="Submit">
+    </form>
+       
+    </div>
+        <br>
+            <a href="/new-account" >Click here to create an account!</a>
+
+
+
+        <script src="/static/js/login-out.js"></script>
+{% endblock %}
