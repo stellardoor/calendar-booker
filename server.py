@@ -95,10 +95,10 @@ def sign_out_session():
 
 
 if __name__ == "__main__":
-    with app.app_context():
-        connect_to_db(app) 
-        # comment out below when live:
-        # app.run(host="0.0.0.0", debug=True)
+    # with app.app_context():
+    connect_to_db(app) 
+    # comment out below when live:
+    # app.run(host="0.0.0.0", debug=True)
 
-        #comment out below when testing:
-        app.run()
+    #comment out below when testing:
+    app.run(host="0.0.0.0")
