@@ -1,6 +1,7 @@
 """Data models for users, appointments"""
 
 from flask_sqlalchemy import SQLAlchemy
+import os
 
 db = SQLAlchemy()
 
@@ -32,7 +33,7 @@ class Appt(db.Model):
 
 def connect_to_db(app): 
 
-    app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql:///melon-appt'
+    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ['POSTGRES_URL']
     app.config["SQLALCHEMY_ECHO"] = True
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
