@@ -15,7 +15,7 @@ os.system("createdb melon-appt")
 
 
 def add_test_users():
-    for num in range(10):
+    for num in range(1,11):
         email = f"user{num}@testing.com".lower()
         password = argon2.hash("testing")
         fname = f"user{num}"

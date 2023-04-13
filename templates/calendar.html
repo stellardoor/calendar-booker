@@ -3,9 +3,37 @@
 
 {% block body %}
 
-<input type="date" id="calendar-input" min={{today}}>
+<form id="calendar-input-form">
+<input type="date" value="" id="calendar-input" min={{tomorrow}}>
 
+<div > Select Time Window (optional)</div>
+<label for="end-input" > From: </label>
+<select id="start-input" >
+    <option value="" selected > Select</option>
+    {% for time in time_slot_list %}
+        <option value={{time[0]}}> {{time[1]}}</option>
+    {% endfor %}
+</select>
+
+<label for="end-input" > To: </label>
+<select id="end-input" >
+    <option value="" selected > Select</option>
+    {% for time in time_slot_list %}
+        <option value={{time[0]}}> {{time[1]}}</option>
+    {% endfor %}
+</select>
+<input type="submit" value="search for times">
+</form>
+
+<h1 id="time-slots" ></h1>
+<form id="create-appointment">
 <div id="appt-options"></div>
+
+<br><br><br><br>
+<div>
+<input type="submit" value="Book Tasting!">
+</div>
+</form>
 
     <script src="/static/js/calendar.js"></script>
 {% endblock %}

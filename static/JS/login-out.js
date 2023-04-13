@@ -1,3 +1,5 @@
+// ** processes login and listens for log-out from base html **
+
 'use strict';
 
 const alert = (message, type) => {

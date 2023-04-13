@@ -3,7 +3,18 @@
 
 {% block body %}
 
+<h1> Appts for {{session["fname"]}}: </h1>
 
+<div class="bookings" >
+    <ul> 
+    {% for booking in bookings %}
+    <li>
+        Melon Tasting on {{booking.appt_date}} --- {{booking.time_block}}
+    </li>
+
+    {% endfor %}
+</ul>
+</div>
 
     <script src="/static/js/appts.js"></script>
 {% endblock %}
